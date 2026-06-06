@@ -1,29 +1,36 @@
 import React from "react";
 import styles from "./Booth.css";
-import boothAla1 from "../../assets/booth/booth-ala-1.jpg";
-import boothAla2 from "../../assets/booth/booth-ala-2.jpg";
-import boothSmall from "../../assets/booth/booth-small.jpg";
+import boothFanime from "../../assets/booth/booth-fanime.jpg";
+import boothKawaiikon from "../../assets/booth/booth-kawaiikon.jpg";
+import boothC2e2 from "../../assets/booth/booth-c2e2.jpg";
+import boothAla from "../../assets/booth/booth-ala-1.jpg";
 import Heading from "../Heading/Heading";
 
 function Booth() {
   const content = {
     images: [
       {
-        src: boothAla1,
-        alt: "10'x10' corner setup at Anime Los Angeles 2026",
-        caption: "10'x10' corner setup at Anime Los Angeles 2026",
-        isFullWidth: true,
-      },
-      {
-        src: boothAla2,
-        alt: "10'x10' corner setup at Anime Los Angeles 2026",
-        caption: "10'x10' corner setup at Anime Los Angeles 2026",
+        src: boothFanime,
+        alt: "8' table setup at FanimeCon, San Jose, CA (May 2026)",
+        caption: "8' table setup at FanimeCon, San Jose, CA (May 2026)",
         isFullWidth: false,
       },
       {
-        src: boothSmall,
-        alt: "8' table setup at local convention",
-        caption: "8' table setup at local convention",
+        src: boothKawaiikon,
+        alt: "8' table setup at KawaiiKon, Honolulu, HI (Apr 2026)",
+        caption: "8' table setup at KawaiiKon, Honolulu, HI (Apr 2026)",
+        isFullWidth: false,
+      },
+      {
+        src: boothC2e2,
+        alt: "10x10' corner booth setup at C2E2, Chicago, IL (Mar 2026)",
+        caption: "10x10' corner booth setup at C2E2, Chicago, IL (Mar 2026)",
+        isFullWidth: false,
+      },
+      {
+        src: boothAla,
+        alt: "10x10' corner setup at Anime Los Angeles, Long Beach, CA (Jan 2026)",
+        caption: "10x10' corner setup at Anime Los Angeles, Long Beach, CA (Jan 2026)",
         isFullWidth: false,
       },
     ],

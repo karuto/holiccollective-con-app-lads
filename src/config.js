@@ -8,7 +8,7 @@ const configMap = {
 
 In addition, Holic Collective artists have been invited to participate in official events hosted by leading industry companies such as miHoYo, Yostar, and Tencent Games, and are recognized members of their official creator programs.`,
     disclaimer:
-      "Holic Collective is a small passion project run by Karuto. Please reach out to hi@holiccollective.com if you have any questions!",
+      "Holic Collective is a small passion project run by Holic. Please reach out to hi@holiccollective.com if you have any questions!",
   },
   personal: {
     title: "Holic Collective Con App - Personal Version",
@@ -16,7 +16,7 @@ In addition, Holic Collective artists have been invited to participate in offici
       "Hi! I'm Holic, a California-based artist & specialty acrylic standee maker. Welcome to my studio! Your fandom deserves more than plain stickers, and so do you 🤘",
     descriptionAdditional: "",
     disclaimer:
-      "Holic Collective is a small passion project run by Karuto. Please reach out to hi@holiccollective.com if you have any questions!",
+      "Holic Collective is a small passion project run by Holic. Please reach out to hi@holiccollective.com if you have any questions!",
   },
 };
 
