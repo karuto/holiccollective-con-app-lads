@@ -22,8 +22,7 @@ echo -e "${GREEN}[1/6] Committing source changes...${NC}"
 git add .
 git commit -m "$COMMIT_MSG"
 if [ $? -ne 0 ]; then
-    echo -e "${RED}No changes to commit or commit failed!${NC}"
-    exit 1
+    echo -e "${BLUE}No new source changes to commit (already committed or no changes). Continuing...${NC}"
 fi
 
 # Deploy personal variant
