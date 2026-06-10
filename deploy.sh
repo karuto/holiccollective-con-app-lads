@@ -17,9 +17,9 @@ COMMIT_MSG="$1"
 
 echo -e "${BLUE}Starting deployment process...${NC}\n"
 
-# Commit all source changes first
+# Commit all source changes first (excluding CNAME - each remote has its own)
 echo -e "${GREEN}[1/7] Committing source changes...${NC}"
-git add .
+git add . ':!CNAME'
 git commit -m "$COMMIT_MSG"
 if [ $? -ne 0 ]; then
     echo -e "${BLUE}No new source changes to commit (already committed or no changes). Continuing...${NC}"
