@@ -18,6 +18,14 @@ In addition, Holic Collective artists have been invited to participate in offici
     disclaimer:
       "Holic Collective is a small passion project run by Holic. Please reach out to hi@holiccollective.com if you have any questions!",
   },
+  lads: {
+    title: "Holic Collective Con App - Lads Version",
+    description:
+      "Hi! I'm Holic, a California-based artist & specialty acrylic standee maker. Welcome to my studio!",
+    descriptionAdditional: "",
+    disclaimer:
+      "Holic Collective is a small passion project run by Holic. Please reach out to hi@holiccollective.com if you have any questions!",
+  },
 };
 
 export default configMap[variant];

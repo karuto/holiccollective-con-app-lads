@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --mode development",
     "build:collective": "REACT_APP_VARIANT=collective webpack --mode production",
-    "build:personal": "REACT_APP_VARIANT=personal webpack --mode production"
+    "build:personal": "REACT_APP_VARIANT=personal webpack --mode production",
+    "build:lads": "REACT_APP_VARIANT=lads webpack --mode production"
   },
   "engines": {
     "node": ">=18"

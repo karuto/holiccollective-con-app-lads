@@ -17,6 +17,8 @@ function Page() {
     descriptionAdditional: config.descriptionAdditional,
   };
 
+  const variant = process.env.REACT_APP_VARIANT;
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -35,7 +37,7 @@ function Page() {
       </header>
       <div className={styles.content}>
         {/* <Team /> */}
-        <Art />
+        {variant !== "lads" && <Art />}
         <Merch />
         <Booth />
         <div className={styles.disclaimerSection}>

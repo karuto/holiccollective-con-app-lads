@@ -13,8 +13,18 @@ import merch5no1 from "../../assets/merch/merch-5-1.png";
 import merch5no2 from "../../assets/merch/merch-5-2.png";
 import merchAl1 from "../../assets/merch/merch-al-1.png";
 import merchAl2 from "../../assets/merch/merch-al-2.png";
+import merchLadsCalebBooba from "../../assets/merch-lads/caleb booba standee.png";
+import merchLadsCalebLenticular from "../../assets/merch-lads/caleb lenticular.png";
+import merchLadsCalebTray from "../../assets/merch-lads/caleb tray.png";
+import merchLadsCalebTrayTop from "../../assets/merch-lads/caleb tray top.png";
+import merchLadsSylusBooba from "../../assets/merch-lads/sylus booba standee.png";
+import merchLadsSylusLenticular from "../../assets/merch-lads/sylus lenticular.png";
+import merchLadsSylusTray from "../../assets/merch-lads/sylus tray.png";
+import merchLadsSylusTrayTop from "../../assets/merch-lads/sylus tray top.png";
+import merchLadsPhoneGrips from "../../assets/merch-lads/LADS phone grips.png";
+import merchLadsPhotocardHolders from "../../assets/merch-lads/LADS photocard holders.jpg";
 
-const merchImages = [
+const defaultMerchImages = [
   merch1,
   merch2Anaxa,
   merch2Phainon1,
@@ -29,7 +39,23 @@ const merchImages = [
   merch5no2,
 ];
 
+const ladsMerchImages = [
+  merchLadsSylusBooba,
+  merchLadsCalebBooba,
+  merchLadsSylusLenticular,
+  merchLadsCalebLenticular,
+  merchLadsSylusTrayTop,
+  merchLadsCalebTrayTop,
+  merchLadsSylusTray,
+  merchLadsCalebTray,
+  merchLadsPhoneGrips,
+  merchLadsPhotocardHolders,
+];
+
 function Merch() {
+  const variant = process.env.REACT_APP_VARIANT;
+  const merchImages = variant === "lads" ? ladsMerchImages : defaultMerchImages;
+
   return (
     <section className={styles.merch}>
       <Heading subtitle="All merch designed in-house - No reselling & no AI" title="Merch showcase" />

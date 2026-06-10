@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./Carousel.css";
 import holicReel from "../../assets/carousel/holic-reel.mp4";
+import ladsSponsor from "../../assets/lads sponsor.jpg";
 
 function Carousel() {
+  const variant = process.env.REACT_APP_VARIANT;
+
   const carouselContent = [
     "Translucent liquid acrylics",
     "Reflective backlit badges",
@@ -49,43 +52,68 @@ function Carousel() {
     setVideoReady(true);
   };
 
+  const ladsContent = [
+    "Artist.",
+    "Cosplayer.",
+    "Event co-host.",
+    "Loyal Sylus kitten.",
+  ];
+
   return (
     <div className={styles.carousel}>
       <div className={styles.carousel__container}>
-        <div className={styles.carousel__textWrapper}>
-          <div
-            className={
-              styles.carousel__text +
-              " " +
-              styles.carousel__text__current +
-              (isAnimating ? " " + styles.carousel__text__exit : "")
-            }
-            style={customTransitionStyles}
-          >
-            {carouselContent[currentIndex]}
+        {variant === "lads" ? (
+          <div className={styles.carousel__textWrapper__static}>
+            <div className={styles.carousel__text__static}>
+              {ladsContent.map((line, index) => (
+                <div key={index}>{line}</div>
+              ))}
+            </div>
           </div>
-          <div
-            className={
-              styles.carousel__text +
-              " " +
-              styles.carousel__text__next +
-              (isAnimating ? " " + styles.carousel__text__enter : "")
-            }
-            style={customTransitionStyles}
-          >
-            {carouselContent[nextIndex]}
+        ) : (
+          <div className={styles.carousel__textWrapper}>
+            <div
+              className={
+                styles.carousel__text +
+                " " +
+                styles.carousel__text__current +
+                (isAnimating ? " " + styles.carousel__text__exit : "")
+              }
+              style={customTransitionStyles}
+            >
+              {carouselContent[currentIndex]}
+            </div>
+            <div
+              className={
+                styles.carousel__text +
+                " " +
+                styles.carousel__text__next +
+                (isAnimating ? " " + styles.carousel__text__enter : "")
+              }
+              style={customTransitionStyles}
+            >
+              {carouselContent[nextIndex]}
+            </div>
           </div>
-        </div>
-        <video
-          className={styles.carousel__image}
-          src={`dist/${holicReel}`}
-          autoPlay
-          loop
-          muted
-          playsInline
-          onCanPlay={handleVideoCanPlay}
-          onPlay={handleVideoPlay}
-        />
+        )}
+        {variant === "lads" ? (
+          <img
+            className={styles.carousel__image__lads}
+            src={`dist/${ladsSponsor}`}
+            alt="LADS Sponsor"
+          />
+        ) : (
+          <video
+            className={styles.carousel__image}
+            src={`dist/${holicReel}`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onCanPlay={handleVideoCanPlay}
+            onPlay={handleVideoPlay}
+          />
+        )}
       </div>
     </div>
   );
